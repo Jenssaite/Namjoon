@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    background: rgb(204, 178, 221);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#Container {
+    width: 90%; /* Ancho del contenedor principal */
+    max-width: 1200px; /* Ancho máximo para evitar que se expanda demasiado */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 2%; /* Padding relativo */
+    text-align: center;
+    border: 1px solid rgb(95, 13, 247);
+    box-sizing: border-box; /* Incluir el padding y border en el ancho */
+}
+
+header {
+    background: rgb(204, 178, 221);
+    height: 15%; /* Altura relativa */
+    width: 100%;
+    text-align: center;
+    line-height: 100px; /* Ajuste de line-height */
+    color: rgb(105, 6, 89);
+    border-bottom: 2px solid white;
+}
+
+nav {
+    background: rgb(210, 145, 240);
+    height: 7%; /* Altura relativa */
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Mostrar los elementos del menú en línea */
+    margin: 0 2%; /* Margen relativo */
+    line-height: 50px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#content {
+    float: left;
+    width: 65%; /* Ancho del contenido principal */
+    min-height: 520px;
+    padding: 2%; /* Padding relativo */
+    box-sizing: border-box;
+    margin-top: 1%; /* Margen relativo */
+    background: rgb(241, 146, 226); /* Color rosa */
+    text-align: center;
+}
+
+aside {
+    float: right;
+    width: 30%; /* Ancho del aside */
+    min-height: 500px;
+    padding: 2%; /* Padding relativo */
+    box-sizing: border-box;
+    margin-top: 1%; /* Margen relativo */
+    background: rgb(210, 145, 240); /* Color morado */
+}
+
+.article {
+    color: white;
+    margin-top: 2%; /* Margen relativo */
+    margin-bottom: 2%; /* Margen relativo */
+    border-bottom: 1px solid #ddd;
+}
+
+.article h2 {
+    font-size: 2.5vw; /* Tamaño de fuente relativo a la anchura de la pantalla */
+}
+
+/* Media Queries para dispositivos de pantalla más pequeña */
+@media only screen and (max-width: 768px) {
+    #Container {
+        width: 95%; /* Reducir el ancho del contenedor en dispositivos pequeños */
+    }
+
+    #content, aside {
+        float: none;
+        width: 100%; /* Ancho completo en dispositivos pequeños */
+        padding: 5%; /* Padding relativo */
+    }
+
+    nav ul li {
+        display: block; /* Mostrar los elementos del menú en bloques */
+        margin: 5% 0; /* Margen relativo */
+        line-height: normal;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        height: 10%; /* Reducir la altura del encabezado */
+        line-height: 50px; /* Ajuste de line-height */
+    }
+    
+    .article h2 {
+        font-size: 4vw; /* Tamaño de fuente relativo a la anchura de la pantalla */
+    }
+}
